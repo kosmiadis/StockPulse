@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+$search-bg-color: #FACCCC;
+
+header {
+    margin-inline: auto;
+    max-width: 1400px;
+    * {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div.brand {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+
+        div.name {
+            * {
+                margin: 0;
+            }
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            
+        }
+
+        div.bottom {
+            p {
+                margin:0;
+                font-size: 0.9rem;
+            }
+        }
+        p {
+            font-size: 2rem;
+            span {
+                color: red;
+            }
+        }
+        img {
+            width: 42px;
+        }
+    }
+
+    div.actions {
+        display: none;
+        div.search {
+
+            input {
+                font-size: 1.1rem;
+                background-color: $search-bg-color;
+                border: none;
+                border-radius: 25px;
+                padding: 8px 12px;
+                
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: rgb(74, 73, 73);
+                    font-size:1rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        justify-content: space-between;
+        align-items: center;
+        
+        div.actions {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@import "IndexPage/header.scss";
+@import "IndexPage/hero.scss";
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(180deg, #FADDDD 0%, #F4E8FA 100%);
+}
