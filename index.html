@@ -6,35 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockPulse | Everything About Stocks</title>
     <script defer src="scripts/StocksApi.js"></script>
+    <script defer src="scripts/search.js"></script>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-    <header>
-        <div class="brand">
-            <div class="name">
-                <p>Stock<span>Pulse</span></p>
-                <img src="images/pulse.png">
+    <div class="main">
+        <header>
+            <div class="brand">
+                <div class="name">
+                    <p>Stock<span>Pulse</span></p>
+                    <img src="images/pulse.png">
+                </div>
+                <div class="bottom">
+                    <p>Everything about Stocks!</p>
+                </div>
             </div>
-            <div class="bottom">
-                <p>Everything about Stocks!</p>
+        </header>
+    
+        <div class="hero">
+            <div class="content">
+                <p>Pulse your way to better investments with <span>Stock<span>Pulse</span></span>!</p>
+                <button>Stocks</button>    
             </div>
+            <img src="images/coin-cartoon.png" id="animate-img">
         </div>
-
-        <div class="actions">
-            <div class="search">
-                <input id='search-stock-input' type="text" placeholder="Search Stocks...">
-            </div>
-        </div>
-    </header>
-
-    <div class="hero">
-        <div class="content">
-            <p>Pulse your way to better investments with <span>Stock<span>Pulse</span></span>!</p>
-            <button>Stocks</button>    
-        </div>
-        <img src="images/coin-cartoon.png">
     </div>
+
+    <div class="stocks" id="stocks">
+
+        <div class="content">
+            <h1>Search Stocks</h1>
+
+            <div class="search">
+                <input type="text" placeholder="Search Stocks..." id="search-stock-input">
+            </div>
+    
+            <div class="search-results" >
+                
+            </div>
+        </div>
+        
+    </div>
+    
 
 </body>
 </html>

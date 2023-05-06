@@ -1,0 +1,1 @@
+@keyframes animateImg{0%{transform:translateY(10px) scale(1.07)}50%{transform:translateY(30px) scale(1)}100%{transform:translateY(10px) scale(1.07)}}#animate-img{animation:animateImg;animation-duration:4s;animation-iteration-count:infinite}

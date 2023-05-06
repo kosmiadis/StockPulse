@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@keyframes animateImg {
+  0% {
+    transform: translateY(10px) scale(1.07);
+  }
+  50% {
+    transform: translateY(30px) scale(1);
+  }
+  100% {
+    transform: translateY(10px) scale(1.07);
+  }
+}
+
+#animate-img {
+  animation: animateImg;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
 header {
   margin-inline: auto;
   max-width: 1400px;
@@ -47,35 +66,10 @@ header div.brand img {
   width: 42px;
 }
 
-header div.actions {
-  display: none;
-}
-
-header div.actions div.search input {
-  font-size: 1.1rem;
-  background-color: #FACCCC;
-  border: none;
-  border-radius: 25px;
-  padding: 8px 12px;
-}
-
-header div.actions div.search input:focus {
-  border: none;
-  outline: none;
-}
-
-header div.actions div.search input::placeholder {
-  color: #4a4949;
-  font-size: 1rem;
-}
-
 @media screen and (min-width: 769px) {
   header {
     justify-content: space-between;
     align-items: center;
-  }
-  header div.actions {
-    display: block;
   }
 }
 
@@ -173,9 +167,98 @@ div.hero button:hover {
   }
 }
 
+div.stocks {
+  background-image: url("../../images/search-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.stocks * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+div.stocks div.content {
+  padding: 2rem;
+  height: 60%;
+  backdrop-filter: blur(2px);
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.stocks div.content h1 {
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 900;
+}
+
+div.stocks div.content div.search {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.stocks div.content div.search input {
+  font-size: 1rem;
+  max-width: 300px;
+  width: 100%;
+  padding: 12px 30px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+
+div.stocks div.content div.search input:focus {
+  outline: none;
+  border: none;
+}
+
+div.stocks div.content div.search input::placeholder {
+  color: black;
+}
+
+@media screen and (min-width: 769px) {
+  div.stocks div.content div.search input {
+    max-width: 450px;
+  }
+}
+
+div.stocks div.content div.search-results {
+  border-radius: 10px;
+  max-width: 450px;
+  margin-top: 1rem;
+  width: 100%;
+  background-color: white;
+}
+
+div.stocks div.content div.search-results div.stock-prev {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
   box-sizing: border-box;
   background-image: linear-gradient(180deg, #FADDDD 0%, #F4E8FA 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+body div.main, body div.stocks {
+  min-height: 100vh;
+}
+
+body div.main {
+  min-height: 100vh;
 }

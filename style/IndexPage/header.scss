@@ -45,36 +45,9 @@ header {
         }
     }
 
-    div.actions {
-        display: none;
-        div.search {
-
-            input {
-                font-size: 1.1rem;
-                background-color: $search-bg-color;
-                border: none;
-                border-radius: 25px;
-                padding: 8px 12px;
-                
-                &:focus {
-                    border: none;
-                    outline: none;
-                }
-
-                &::placeholder {
-                    color: rgb(74, 73, 73);
-                    font-size:1rem;
-                }
-            }
-        }
-    }
 
     @media screen and (min-width: 769px) {
         justify-content: space-between;
         align-items: center;
-        
-        div.actions {
-            display: block;
-        }
     }
 }

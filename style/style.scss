@@ -1,9 +1,20 @@
+@import "animations/heroImgAnimation.scss";
 @import "IndexPage/header.scss";
 @import "IndexPage/hero.scss";
+@import "SearchPage/search.scss";
 
 body {
     min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
     background-image: linear-gradient(180deg, #FADDDD 0%, #F4E8FA 100%);
+    display: flex;
+    flex-direction: column;
+
+    div.main, div.stocks {
+        min-height: 100vh;
+    }
+    div.main {
+        min-height: 100vh;
+    }
 }

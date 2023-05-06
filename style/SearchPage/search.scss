@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+div.stocks {    
+    
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+    background-image: url('../../images/search-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div.content {
+        padding: 2rem;
+        height: 60%;
+        backdrop-filter: blur(2px);
+        width: 80%;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            color: white;
+            font-size: 2.3rem;
+            font-weight: 900;
+        }
+
+        div.search {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                font-size: 1rem;
+                max-width: 300px;
+                width: 100%;
+                padding: 12px 30px;
+                border-radius: 20px;
+                outline: none;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                    border: none;
+
+                }
+                &::placeholder {
+                    color: black;
+                }
+                
+                @media screen and (min-width: 769px) {
+                    max-width: 450px;
+                }
+            }
+
+            
+        }
+
+        div.search-results {
+            border-radius: 10px;
+            max-width: 450px;
+            margin-top: 1rem;
+            width: 100%;
+            background-color: white;
+
+            div.stock-prev {
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid;
+            }
+        }
+    }
+
+
+    
+}
