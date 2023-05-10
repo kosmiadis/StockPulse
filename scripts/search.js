@@ -14,14 +14,12 @@ function displaySearchedStocks(stocks) {
                     </div>
 
                     <div className="last-price">
-                        <p>${stock.last_price}</p>
+                        <p>${stock.last_price} $</p>
                     </div>                    
                 </div>
             `
         )
     }
-    
-    
 }
 
 searchStocksInput.addEventListener('input', e => {

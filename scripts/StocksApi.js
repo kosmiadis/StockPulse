@@ -6,7 +6,8 @@ const options = {
 	}
 };
 
-let INDICES = [
+let INDICES = []
+/*let INDICES = [
     {name: 'S&P 500', last_price: '4,061.22', symbol: '$SPX', region: 'Americas'}, 
     {name: 'DJIA', last_price: '33,127.74', symbol: '$DJI', region: 'Americas'}, 
     {name: 'NYSE', last_price: '15,117.67', symbol: '$NYA', region: 'Americas'}, 
@@ -26,7 +27,7 @@ let INDICES = [
     {name: 'Dow Jones Canada', last_price: '576.24', symbol: '$CADOWD', region: 'Americas'},
     {name: 'S&P Latin America', last_price: '217.09', symbol: '$SCRTLA', region: 'Americas'},
     {name: 'Schwab 1000 Index', last_price: '13,343.94', symbol: '$SNX', region: 'Americas'}
-]
+]*/
 
 const Stocks = () => {
 
@@ -49,16 +50,14 @@ const Stocks = () => {
         for (const quote of data) {
             INDICES.push({name: quote.Name, last_price: quote.LastPrice, symbol: quote.Symbol, region: quote.Region })
         }
-        console.log(INDICES)
     }
 
     return {fetchStock, fetchAllStocks}
 }
 
 window.addEventListener('load', e => {
-    //const stocks = Stocks()
-    //stocks.fetchAllStocks()
-    console.log(INDICES)
+    const stocks = Stocks()
+    stocks.fetchAllStocks()
 })
 
 

@@ -6,7 +6,7 @@ div.stocks {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 div.stocks * {
@@ -62,18 +62,24 @@ div.stocks div.content div.search input::placeholder {
   }
 }
 
-div.stocks div.content div.search-results {
-  border-radius: 10px;
-  max-width: 450px;
-  margin-top: 1rem;
+div.stocks div.content div.results {
   width: 100%;
-  background-color: white;
+  max-width: 450px;
 }
 
-div.stocks div.content div.search-results div.stock-prev {
+div.stocks div.content div.results div.search-results {
+  border-radius: 10px;
+  margin-top: 1rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.656);
+  display: flex;
+  flex-direction: column;
+}
+
+div.stocks div.content div.results div.search-results div.stock-prev {
+  height: 50px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid;
 }
